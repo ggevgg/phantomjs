@@ -483,6 +483,10 @@ public slots:
 
     void setProxy(const QString& proxyUrl);
 
+    qreal stringToPointSize(const QString&) const;
+    qreal printMargin(const QVariantMap&, const QString&);
+    qreal getHeight(const QVariantMap&, const QString&) const;
+
 signals:
     void initialized();
     void loadStarted();
@@ -544,6 +548,7 @@ private:
     int m_loadingProgress;
     bool m_shouldInterruptJs;
     CookieJar* m_cookieJar;
+    qreal m_dpi;
 
     friend class Phantom;
     friend class CustomPage;
