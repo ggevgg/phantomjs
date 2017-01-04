@@ -1166,7 +1166,7 @@ bool WebPage::renderPdf(const QString& fileName)
     QPrinter printer;
     printer.setOutputFormat(QPrinter::PdfFormat);
     printer.setOutputFileName(fileName);
-    printer.setResolution(m_dpi);
+    printer.setResolution(300);
     QVariantMap paperSize = m_paperSize;
 
     if (paperSize.isEmpty()) {
